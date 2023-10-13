@@ -1,0 +1,30 @@
+#!/bin/bash
+wget https://raw.githubusercontent.com/jaws316/rhel/main/bashrc-add
+cat bashrc-add >> .bashrc
+echo "Bashrc Done"
+echo ""
+mkdir .bin
+cd .bin
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/aip
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/lip
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/wip
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/check-my-net
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/HTTPServer
+wget https://raw.githubusercontent.com/jaws316/rhel/main/update
+chmod 777 *
+cd
+echo "Bin Done"
+echo ""
+sudo dnf install tmux -yyq
+sudo dnf install nano -yyq
+#sudo dnf install ncdu -yyq
+#sudo dnf install htop -yyq
+#sudo dnf install sshfs -yyq
+#sudo dnf install speedtest-cli -yyq 
+sudo dnf install bind-utils -yyq
+echo "Programs Insealled"
+echo ""
+rm bashrc-add
+rm rhel-sever-setup
+echo "All Done"
+echo ""
